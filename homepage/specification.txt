@@ -1,0 +1,21 @@
+## HTML Tags Used:
+1. <!DOCTYPE>: Declares the document type and version of HTML.
+2. <html>: Defines the root of an HTML document.
+3. <head>: Contains meta-information about the HTML document.
+4. <meta>: Provides metadata about the HTML document.
+5. <title>: Defines the title of the HTML document.
+6. <link>: Links external resources such as stylesheets.
+7. <body>: Contains the visible content of the HTML document.
+8. <header>: Represents introductory content, usually at the beginning of a section or page.
+9. <main>: Represents the main content of the HTML document.
+10. <footer>: Represents a footer for a document or section.
+
+## CSS Properties Used:
+1. color: Specifies the text color.
+2. font-size: Sets the size of the font.
+3. margin-bottom: Sets the bottom margin of an element.
+4. text-align: Aligns the text within an element.
+5. background-color: Sets the background color of an element.
+
+## JavaScript and Bootstrap:
+I chose to use JavaScript to dynamically generate the pizza menu and display pizza details based on user selection. Bootstrap was utilized to create a responsive layout and style the elements for a modern look and feel.

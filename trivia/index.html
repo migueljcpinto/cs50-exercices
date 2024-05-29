@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            // Run script once DOM is loaded
+            document.addEventListener('DOMContentLoaded', function() {
+                // When correct answer is clicked, change color to green
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function() {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#feedback1').innerHTML = 'You´re correct! Coimbra is indeed considered a contender for the title of oldest city in Europe. While there isn´t a definitive answer to this title (depending on how you define "city"), Coimbra has a strong claim due to its Roman origins in the 1st century AD and its rich historical heritage.'
+                })
+
+                // When any incorrect answer is clicked, change the color to red
+                let incorrects = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrects.length; i++) {
+                    incorrects[i].addEventListener('click', function() {
+                        incorrects[i].style.backgroundColor = 'red';
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect. Try again.';
+                    })
+                }
+
+                // CHeck free response submission
+                document.querySelector('#check').addEventListener('click', function(){
+                    let input = document.querySelector('input');
+                    let userInput = input.value.toLowerCase();
+                    if (userInput === 'pastel de nata' || userInput === 'nata' || userInput === 'pastel') {
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#feedback2').innerHTML = 'You´ve got it! Pastel de Nata is a strong contender for the most internationally loved Portuguese delicacy.  Its crispy, flaky crust and rich, creamy custard filling are truly irresistible.';
+                    } else {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#feedback2').innerHTML = 'Incorrect, try again!';
+                    }
+                })
+
+
+            })
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Which Portuguese city is considered the "oldest in Europe"?</h3>
+                <button class="incorrect">Lisbon</button>
+                <button class="correct">Coimbra</button>
+                <button class="incorrect">Braga</button>
+                <button class="incorrect">Guimarães</button>
+
+                <p id="feedback1"></p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the most internationally appreciated Portuguese delicacy and what is its history?</h3>
+                <input type="text"></input>
+                <button id="check">Check your Answer</button>
+
+                <p id="feedback2"></p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,3 @@
+Prompt a Height number
+If height less than 1 or greater than 8, repeat de first step
+Repeat or add more height - printing i hashes, create a newline
